@@ -20,10 +20,11 @@ function leerValorDeNombre(){
     const inputNombre = document.getElementById("nombre"); //getElementById es una función
     return inputNombre.value; 
 }
+function imprimirResultado(resultado){
+    console.log(resultado);
+}
 function manejoDelEventoInputNombre(){
     const nombre = leerValorDeNombre().toLowerCase();
     const numLetraA = encontrarNumeroDeLetra( "a", nombre );
     console.log("NUMERO LETRAS A:" + numLetraA);
-
-    //console.log(nombre);
 }
