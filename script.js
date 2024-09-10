@@ -17,14 +17,16 @@ function encontrarNumeroDeLetra( letra, nombre ) {
     return numeroDeLetras;
 }
 function leerValorDeNombre(){
-    const inputNombre = document.getElementById("nombre"); //getElementById es una función
+    const inputNombre = document.getElementById("nombre");
     return inputNombre.value; 
 }
-function imprimirResultado(resultado){
-    console.log(resultado);
+function imprimirResultado( resultado ){
+  const paragraph = document.getElementById("vocales");
+  paragraph.innerHTML = resultado;
 }
 function manejoDelEventoInputNombre(){
     const nombre = leerValorDeNombre().toLowerCase();
+    console.log(nombre);
     const numLetraA = encontrarNumeroDeLetra( "a", nombre );
-    console.log("NUMERO LETRAS A:" + numLetraA);
+    imprimirResultado("Num letras A: " + numLetraA );
 }
