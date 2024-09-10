@@ -16,10 +16,11 @@ function encontrarNumeroDeLetra( letra, nombre ) {
     }
     return numeroDeLetras;
 }
-
-function manejoDelEventoInputNombre(){
-    console.log("me estoy invocando");
-
+function leerValorDeNombre(){
+    const inputNombre = document.getElementById("nombre"); //getElementById es una función
+    return inputNombre.value; 
 }
-
-//console.log( encontrarNumeroDeLetra("n", "danny"));
+function manejoDelEventoInputNombre(){
+    const nombre = leerValorDeNombre();
+    console.log(nombre);
+}
